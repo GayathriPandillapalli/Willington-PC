@@ -3,3 +3,6 @@
 /selenium-screenshot-3.png
 /*.html
 /log.html
+/venv
+/.gitignore
+/gitIgnore.txt
