@@ -1,0 +1,6 @@
+--outputdir
+C:\Users\pangayat\AppData\Local\Temp\RIDEq19lnss6.d
+-C
+off
+-W
+136
