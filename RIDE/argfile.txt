@@ -1,6 +1,0 @@
---outputdir
-C:\Users\pangayat\AppData\Local\Temp\RIDE_8vaj3n3.d
--C
-off
--W
-136

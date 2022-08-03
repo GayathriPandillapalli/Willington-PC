@@ -1,6 +1,9 @@
 *** Settings ***
 Library           SeleniumLibrary    #from selenium.webdriver.support import tim
+Library           SeleniumLibrary
+Library           BuiltIn
 Library           Collections
+Library           ../customeSelenium.py    WITH NAME    cs
 
 *** Variables ***
 ${browser}        Chrome
@@ -11,7 +14,10 @@ SearchContent
     Open Browser    ${url}    ${browser}
     Input Text    xpath=//input[@name="q"]    robotframework
     Sleep    5s
-    Click Button    xpath=(//input[@name='btnK'])[2]
-    ${r}=    Get Element Attribute    xpath=//input[@class='gLFyf gsfi']    value
-    ${msg}=    Run Keyword And Expect Error    *    Should Contain    ${r}    PASS
-    Close Browser
+    Click Button    xpath=//input[@name="btnK"]
+    ${i}    Get Source
+    ${Headers}    cs.Get All Headers    ${i}    h3    LC20lb MBeuO DKV0Md
+    log    ${Headers}
+    FOR    ${Header}    IN    ${Headers}
+        log    ${Header}
+    END
